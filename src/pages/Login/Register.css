@@ -1,0 +1,50 @@
+/* register.css */
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.form-floating {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-color: #3b5998;
+  border-radius: 20px;
+  color: #3b5998;
+  background-color: #ffffff;
+}
+
+.btn {
+  background-color: #3b5998;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.alert-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Additional styles for the register page */
+.register-form {
+  margin-top: 20px; /* Add margin to the top of the form */
+}
+
+.register-form h3 {
+  margin-bottom: 20px; /* Add margin below the h3 heading */
+}
+.form-btn-container {
+  text-align: center;
+}
+
+.btn-block {
+  width: 100%;
+}
