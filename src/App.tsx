@@ -5,7 +5,7 @@ import Login from './pages/Login/Login';
 import Nav from './components/Nav';
 import Home from './pages/Home/Home';
 import Register from './pages/Login/Register';
-import Dashboard from './pages/Dashboard/Dashboard';
+import Dashboard from './pages/Dashboard/Northwind/Dashboard';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

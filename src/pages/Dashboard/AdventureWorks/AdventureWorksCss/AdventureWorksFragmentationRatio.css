@@ -1,0 +1,15 @@
+.chart-container {
+    position: relative; /* Göreceli konumlandırma */
+  }
+  
+  /* Index Name tooltip */
+  .index-name-tooltip {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Arka plan rengi */
+    border: 1px solid #ccc; /* Kenarlık */
+    padding: 5px; /* Dolgu */
+    border-radius: 5px; /* Kenar yuvarlatma */
+  }
+  

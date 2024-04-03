@@ -23,7 +23,14 @@ const Dashboard: React.FC<DashboardProps> = ({ isLoggedIn }) => {
       try {
         const response = await axios.get<TableData[]>('http://localhost:5036/api/Tables/GetIndexSizes');
         console.log('API Response:', response.data);
-        setTableData(response.data);
+
+        // Convert indexSizeGB to megabytes
+        const dataInMegabytes = response.data.map((item) => ({
+          ...item,
+          indexSizeGB: item.indexSizeGB * 1024, // Convert GB to MB
+        }));
+
+        setTableData(dataInMegabytes);
       } catch (error) {
         console.error('API veri alma hatası:', error);
       }
@@ -36,39 +43,41 @@ const Dashboard: React.FC<DashboardProps> = ({ isLoggedIn }) => {
     labels: tableData.map((data) => data.indexName),
     datasets: [
       {
-        label: 'Total Index Sizes (GB)',
+        label: 'Total Index Sizes (MB)', // Update the label to MB
         data: tableData.map((data) => data.indexSizeGB),
-        backgroundColor: 'rgba(41, 128, 185, 0.5)',
+        backgroundColor: tableData.map((data) =>
+          data.indexSizeGB > 0.15 ? 'red' : 'rgba(41, 128, 185, 0.5)'
+        ),
         borderColor: 'rgba(41, 128, 185, 1)',
         borderWidth: 1,
       },
     ],
   };
 
-  const chartOptions:any = {
+  const chartOptions: any = {
     scales: {
       x: {
         beginAtZero: true,
         title: {
           display: true,
-          text: 'INDEX NAME', 
+          text: 'INDEX NAME',
           font: {
-            size: 16, 
-            weight: 'bold', 
-            family: 'Arial, sans-serif'
-          }
+            size: 16,
+            weight: 'bold',
+            family: 'Arial, sans-serif',
+          },
         },
       },
       y: {
         beginAtZero: true,
         title: {
           display: true,
-          text: 'INDEX SIZE (GB)',
+          text: 'INDEX SIZE (MB)', // Update the y-axis title to MB
           font: {
-            size: 16, 
-            weight: 'bold', 
-            family: 'Arial, sans-serif'
-          } 
+            size: 16,
+            weight: 'bold',
+            family: 'Arial, sans-serif',
+          },
         },
       },
     },

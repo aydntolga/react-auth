@@ -1,0 +1,124 @@
+/* Modern tasarım için CSS kodları */
+
+.customer-info-graph-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #add8e6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+
+.back-button i {
+  margin-right: 5px;
+}
+
+.graph-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #add8e6;
+  color:#3b5998 ;
+}
+
+.dropdown-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dropdown-select {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #add8e6; /* Arka plan rengi */
+  color: #3b5998; /* Yazı rengi */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.dropdown-select:hover {
+  border-color: #007bff; /* Hover durumunda border rengi */
+}
+
+.dropdown-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Odaklandığında hafif gölge efekti */
+}
+
+/* Modern buton tasarımı */
+.filter-button {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+.chart-container {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  max-width: 1200px; /* İsteğe bağlı: Grafik maksimum genişlik */
+  margin: auto; /* Grafikleri ortala */
+  
+}
+
+.chartjs-size-monitor {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .customer-info-graph-container {
+    width: 100%;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+}

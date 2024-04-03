@@ -1,4 +1,61 @@
-.welcome-text {
-  user-select: none;
-  cursor: default;
+.select-container {
+  position: relative;
+  width: 250px; /* İhtiyaca göre genişliği ayarlayın */
+  z-index: 1; /* Dropdown'u diğer elemanların üzerine getirir */
+}
+
+.form-select {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #add8e6; /* Arka plan rengi */
+  color: #3b5998; /* Yazı rengi */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 10px; /* Dropdown elemanları arasına 10px boşluk bırak */
+}
+
+.form-select:hover {
+  border-color: #007bff; /* Hover durumunda border rengi */
+}
+
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Odaklandığında hafif gölge efekti */
+}
+
+.chart-type-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.dropdown-container,
+.button-container,
+.chart-type-dropdown-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.chart-type-dropdown {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #add8e6;
+  color: #3b5998;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 10px; /* Dropdown elemanları arasına 10px boşluk bırak */
+}
+
+.chart-type-dropdown:hover {
+  border-color: #007bff;
+}
+
+.chart-type-dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
